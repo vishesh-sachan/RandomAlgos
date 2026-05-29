@@ -377,7 +377,7 @@ function TangoConstraints() {
     ${selectedCell &&
                                                             selectedCell[0] === row &&
                                                             selectedCell[1] === col
-                                                            ? 'bg-white text-black ring-2 ring-[#7CFF6B]'
+                                                            ? 'bg-white text-black'
                                                             : ''
                                                         }
   `}

@@ -8,7 +8,6 @@ const GRID_SIZE = 6
 
 function TangoVisualizer() {
   const { board, setBoard } = useTango()
-
   const [selected, setSelected] = useState({
     row: 0,
     col: 0,
@@ -16,60 +15,7 @@ function TangoVisualizer() {
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (
-        [
-          'ArrowUp',
-          'ArrowDown',
-          'ArrowLeft',
-          'ArrowRight',
-        ].includes(e.key)
-      ) {
-        e.preventDefault()
-      }
-
-      const { row, col } = selected
-
-      switch (e.key) {
-        case 'ArrowUp':
-          setSelected({
-            row: Math.max(0, row - 1),
-            col,
-          })
-          break
-
-        case 'ArrowDown':
-          setSelected({
-            row: Math.min(GRID_SIZE - 1, row + 1),
-            col,
-          })
-          break
-
-        case 'ArrowLeft':
-          setSelected({
-            row,
-            col: Math.max(0, col - 1),
-          })
-          break
-
-        case 'ArrowRight':
-          setSelected({
-            row,
-            col: Math.min(GRID_SIZE - 1, col + 1),
-          })
-          break
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-
-    return () =>
-      window.removeEventListener(
-        'keydown',
-        handleKeyDown
-      )
-  }, [selected])
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0
 
   const cycleCell = (r: number, c: number) => {
     setBoard((prev) => {
@@ -86,6 +32,88 @@ function TangoVisualizer() {
       return next
     })
   }
+
+  const setCellValue = (
+    value: 0 | 1 | null
+  ) => {
+    const { row, col } = selected
+
+    setBoard((prev) => {
+      const next = prev.map((r) => [...r])
+      next[row][col] = value
+      return next
+    })
+  }
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (
+        [
+          'ArrowUp',
+          'ArrowDown',
+          'ArrowLeft',
+          'ArrowRight',
+          '0',
+          '1',
+          'Backspace',
+          'Delete',
+        ].includes(e.key)
+      ) {
+        e.preventDefault()
+      }
+
+      switch (e.key) {
+        case '0':
+          setCellValue(0)
+          break
+
+        case '1':
+          setCellValue(1)
+          break
+
+        case 'Backspace':
+        case 'Delete':
+          setCellValue(null)
+          break
+
+        case 'ArrowUp':
+          setSelected(prev => ({
+            row: Math.max(0, prev.row - 1),
+            col: prev.col,
+          }))
+          break
+
+        case 'ArrowDown':
+          setSelected(prev => ({
+            row: Math.min(GRID_SIZE - 1, prev.row + 1),
+            col: prev.col,
+          }))
+          break
+
+        case 'ArrowLeft':
+          setSelected(prev => ({
+            row: prev.row,
+            col: Math.max(0, prev.col - 1),
+          }))
+          break
+
+        case 'ArrowRight':
+          setSelected(prev => ({
+            row: prev.row,
+            col: Math.min(GRID_SIZE - 1, prev.col + 1),
+          }))
+          break
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () =>
+      window.removeEventListener(
+        'keydown',
+        handleKeyDown
+      )
+  }, [selected])
 
   return (
     <div className="min-h-screen bg-[#131313] text-[#f8f9fa] flex flex-col">
@@ -116,10 +144,14 @@ function TangoVisualizer() {
             </h1>
 
             <p className="mt-3 text-gray-400 text-sm sm:text-base">
-              Tap a cell to cycle:
-              Empty → Sun → Moon → Empty.
-              <br />
-              Arrow keys still work on desktop.
+              Desktop:
+              Arrow keys to move.
+              0 for Sun.
+              1 for Moon.
+              Backspace to clear.
+
+              Mobile:
+              Tap a cell, then use the controls below.
             </p>
 
           </div>
@@ -143,7 +175,9 @@ function TangoVisualizer() {
                           col: c,
                         })
 
-                        cycleCell(r, c)
+                        if (isTouchDevice) {
+                          cycleCell(r, c)
+                        }
                       }}
                       className={`
                         w-12 h-12
@@ -159,10 +193,9 @@ function TangoVisualizer() {
 
                         transition-all
 
-                        ${
-                          active
-                            ? 'bg-white text-black'
-                            : ''
+                        ${active
+                          ? 'bg-white text-black'
+                          : ''
                         }
                       `}
                     >

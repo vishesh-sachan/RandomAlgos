@@ -9,9 +9,6 @@ function Footer() {
         </div>
 
         <div className="flex gap-6 text-xs">
-          <a href="/about" rel="noopener noreferrer">
-            About
-          </a>
           <a onClick={() => window.open('https://github.com/vishesh-sachan', '_blank')}>
             GITHUB
           </a>

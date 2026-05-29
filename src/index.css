@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --surface: #131313;
+  --primary: #f8f9fa;
+  --secondary: #a0a0a0;
+}
+
+body {
+  background: var(--surface);
+  color: var(--primary);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #f8f9fa;
+  color: #131313;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

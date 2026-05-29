@@ -143,17 +143,20 @@ function TangoVisualizer() {
               &gt; Board Input
             </h1>
 
-            <div className="mt-3 text-gray-400 text-sm sm:text-base hidden sm:block">
-              <ul className="list-disc pl-5">
-                <li>Arrow keys to move.</li>
-                <li>0 for Sun.</li>
-                <li>1 for Moon.</li>
-                <li>Backspace to clear.</li>
-              </ul>
-            </div>
-            <div className="mt-3 text-gray-400 text-sm sm:text-base block sm:hidden">
-              <p>Tap cells to cycle through Sun, Moon, and Empty.</p>
-            </div>
+            {isTouchDevice ? (
+              <div className="mt-3 text-gray-400 text-sm sm:text-base">
+                <p>Tap cells to cycle through Sun, Moon, and Empty.</p>
+              </div>
+            ) : (
+              <div className="mt-3 text-gray-400 text-sm sm:text-base">
+                <ul className="list-disc pl-5">
+                  <li>Arrow keys to move.</li>
+                  <li>0 for Sun.</li>
+                  <li>1 for Moon.</li>
+                  <li>Backspace to clear.</li>
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className="flex justify-center">

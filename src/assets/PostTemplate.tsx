@@ -1,6 +1,6 @@
 import Title from '../components/Title.tsx'
 import TryAlgorithm from '../components/TryAlgorithm.tsx'
-import CodeBlock from '../components/CodeBlock.tsx'
+// import CodeBlock from '../components/CodeBlock.tsx'
 
 // code block example 
 {/* <CodeBlock

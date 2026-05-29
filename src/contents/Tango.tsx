@@ -14,7 +14,7 @@ import boardCode from './tango-code.ts'
 
 // img example
 {/* <div>
-  <img src="" alt="" className="w-full max-w-full h-auto rounded-lg" />
+  <img src="" alt="" style={{ width: 'auto', height: 'auto' }} />
   <p className="text-xs text-gray-400 uppercase tracking-wide">
     {caption}
   </p>
@@ -110,7 +110,7 @@ function Tango() {
         </ul>
 
         <div>
-          <img src="/board.png" alt="Tango Board" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/board.png" alt="Tango Board" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Tango Board
           </p>
@@ -212,7 +212,7 @@ function Tango() {
           </ul>
 
         <div>
-          <img src="/constants.png" alt="Constants" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/constants.png" alt="Constants" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Constants
           </p>
@@ -260,7 +260,7 @@ X`}
           />
         </div>
           <div>
-            <img src="/equal.png" alt="Equal" className="w-full max-w-full h-auto rounded-lg" />
+            <img src="/equal.png" alt="Equal" style={{ width: 'auto', height: 'auto' }} />
             <p className="text-xs text-gray-400 uppercase tracking-wide">
               Equal
             </p>
@@ -280,7 +280,7 @@ X`}
         </div>
 
         <div>
-          <img src="/cross.png" alt="Cross" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/cross.png" alt="Cross" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Cross
           </p>
@@ -559,7 +559,7 @@ OR
         <p>There are only six possibilities.</p>
 
         <div>
-          <img src="/three-consecutive.png" alt="Three Consecutive" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/three-consecutive.png" alt="Three Consecutive" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Three Consecutive
           </p>
@@ -914,13 +914,13 @@ X00`}
         </p>
 
         {/* <div>
-          <img src="/d-tree.png" alt="Decision Tree" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/d-tree.png" alt="Decision Tree" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Decision Tree
           </p>
         </div> */}
         <div>
-          <img src="/backtrack-tree.png" alt="Backtracking Tree" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/backtrack-tree.png" alt="Backtracking Tree" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Backtracking Tree
           </p>
@@ -1018,7 +1018,7 @@ X00`}
         </ul>
 
         <div>
-          <img src="/complete-board.png" alt="Completed Board" className="w-full max-w-full h-auto rounded-lg" />
+          <img src="/complete-board.png" alt="Completed Board" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Completed Board
           </p>

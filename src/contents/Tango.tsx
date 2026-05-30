@@ -1102,9 +1102,9 @@ X00`}
         <p>Below are resources related to this write-up and solver:</p>
 
         <ul className="list-disc pl-5 space-y-2">
-          <li><a href="/tango-code" target="_blank" rel="noopener noreferrer">Complete code file: Tango.py</a></li>
-          <li><a href="/sketches" target="_blank" rel="noopener noreferrer">Original sketches and planning: notes and drafts used while designing the solver</a></li>
-          <li><a href="/blog-first-draft" target="_blank" rel="noopener noreferrer">Blog's First Draft</a></li>
+          <li><a href="https://github.com/vishesh-sachan/RANDOM_ALGO/blob/main/src/originals/tango/Tango.py" target="_blank" rel="noopener noreferrer">Complete code file: Tango.py</a></li>
+          <li><a href="https://drive.google.com/file/d/1L5anX-M2iR-Udw5y3Ef4rrVJAcg__cBl/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Original sketches and planning: notes and drafts used while designing the solver</a></li>
+          <li><a href="https://github.com/vishesh-sachan/RANDOM_ALGO/blob/main/src/originals/tango/tango-blog-first-draft.md" target="_blank" rel="noopener noreferrer">Blog's First Draft</a></li>
         </ul>
 
       </div>

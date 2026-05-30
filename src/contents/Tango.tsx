@@ -199,7 +199,15 @@ function Tango() {
             code={`filled_cells = {
   (0,0): 0,
   (2,1): 1
-}`}
+}
+
+# function to fill the board
+def place_filled_cells():
+    for key in filled_cells.keys():
+        r, c = key
+        val = filled_cells[key]
+        board[r][c] = val
+`}
           />
         </div>
           <p>
@@ -1087,6 +1095,17 @@ X00`}
           But for now I'm happy that a random thought while playing Tango turned into an algorithm.
         </p>
 
+        <hr className='border-gray-300' />
+        <H1 text="Resources" />
+        <hr className='border-gray-300' />
+
+        <p>Below are resources related to this write-up and solver:</p>
+
+        <ul className="list-disc pl-5 space-y-2">
+          <li><a href="/tango-code" target="_blank" rel="noopener noreferrer">Complete code file: Tango.py</a></li>
+          <li><a href="/sketches" target="_blank" rel="noopener noreferrer">Original sketches and planning: notes and drafts used while designing the solver</a></li>
+          <li><a href="/blog-first-draft" target="_blank" rel="noopener noreferrer">Blog's First Draft</a></li>
+        </ul>
 
       </div>
 

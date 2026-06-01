@@ -680,5 +680,5 @@ But for now I'm happy that a random thought while playing Tango turned into an a
 Below are resources related to this write-up and solver:
 
 - [Complete code file: Tango.py]()
-- [Original sketches and planning: notes and drafts used while designing the solver]()
+- [Original sketches: notes and drafts used while designing the solver]()
 - [Blog's First Draft]()

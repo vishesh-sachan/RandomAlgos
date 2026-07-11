@@ -16,6 +16,27 @@ type Post = {
 
 export const posts: Post[] = [
   {
+    id: '0x1A2',
+    title: "Queens Algo: Building a Solver One Wrong Turn at a Time",
+    slug: "queens-algo",
+    description:
+      "How I built a solver for LinkedIn's Queens puzzle by experimenting with representations, discovering bugs, and gradually shaping a recursive backtracking algorithm. Not the most optimized solution—just the journey that got me there.",
+    date: "2026-07-10",
+    tags: [
+      "algorithms",
+      "backtracking",
+      "recursion",
+      "queens",
+      "linkedin-games",
+      "problem-solving",
+      "python",
+      "visualization"
+    ],
+    image:
+      '/queens/queens-cover.png',
+    component: Queens,
+  },
+  {
     id: '0x1A1',
     title: "Building a Solver for LinkedIn's Tango Puzzle",
     slug: "tango-algo",
@@ -35,23 +56,5 @@ export const posts: Post[] = [
     featured: true,
     component: Tango,
   },
-  {
-    id: '0x1A2',
-    title: "Queens Algo: Building a Solver One Wrong Turn at a Time",
-    slug: "queens-algo",
-    description:
-      "How I built a solver for LinkedIn's Queens puzzle by experimenting with representations, discovering bugs, and gradually shaping a recursive backtracking algorithm. Not the most optimized solution—just the journey that got me there.",
-    date: "2026-07-10",
-    tags: [
-      "algorithms",
-      "backtracking",
-      "recursion",
-      "queens",
-      "linkedin-games",
-      "problem-solving",
-      "python",
-      "visualization"
-    ],
-    component: Queens,
-  }
+  
 ] 

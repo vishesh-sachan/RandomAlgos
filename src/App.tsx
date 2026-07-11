@@ -6,6 +6,8 @@ import Post from './pages/Post'
 import TangoVisualizer from './pages/TangoVisualizer'
 import TangoConstraints from './pages/TangoConstraints'
 import TangoPlayback from './pages/TangoPlayback'
+import QueensVisualizer from './pages/QueensVisualizer'
+import QueensPlayback from './pages/QueensPlayback'
 
 function App() {
   return (
@@ -22,6 +24,10 @@ function App() {
       <Route path="/visualizers/tango/constraints" element={<TangoConstraints />} />
 
       <Route path="/visualizers/tango/playback" element={<TangoPlayback />} />
+
+      <Route path="/visualizers/queens" element={<QueensVisualizer />} />
+
+      <Route path="/visualizers/queens/playback" element={<QueensPlayback />} />
 
     </Routes>
   )

@@ -27,7 +27,7 @@ function Queens() {
       </header>
 
       <div>
-        <TryAlgorithm url="" /> {/* TODO: add Queens visualizer URL */}
+        <TryAlgorithm url="/visualizers/queens" />
       </div>
 
       <div className="flex flex-col gap-6 text-gray-300 leading-8">
@@ -61,7 +61,7 @@ function Queens() {
         <hr className='border-gray-300' />
 
         <p>
-          Queens is played on a <b>nxn grid</b>.
+          Queens is played on a <b>nXn grid</b>.
         </p>
 
         <p>
@@ -75,11 +75,16 @@ function Queens() {
           <li>Two queens can never touch each other, not even diagonally.</li>
         </ul>
 
-        {/* TODO: add image - Draw a sample Queens board showing coloured regions and the four rules visually */}
         <div>
-          <img src="" alt="Sample Queens board with coloured regions" style={{ width: 'auto', height: 'auto' }} />
-          <p className="text-xs text-gray-400 uppercase tracking-wide">
-            Queens Board
+          <img src="/queens/rules-1-2.jpg" alt="Queens board showing rules 1 and 2" style={{ width: 'auto', height: 'auto' }} />
+          <p className="text-xs text-gray-400 uppercase tracking-wide mt-5">
+            Rules 1 and 2
+          </p>
+        </div>
+        <div>
+          <img src="/queens/rules-3-4.jpg" alt="Queens board showing rules 3 and 4" style={{ width: 'auto', height: 'auto' }} />
+          <p className="text-xs text-gray-400 uppercase tracking-wide mt-5">
+            Rules 3 and 4
           </p>
         </div>
 
@@ -242,10 +247,9 @@ function Queens() {
           It just felt like common sense.
         </p>
 
-        {/* TODO: add image - Draw two regions, one with 2 cells and another with 6 cells. Show why starting with the smaller one creates fewer possibilities */}
         <div>
-          <img src="" alt="Two regions showing why smaller region first reduces branching" style={{ width: 'auto', height: 'auto' }} />
-          <p className="text-xs text-gray-400 uppercase tracking-wide">
+          <img src="/queens/region-size-comparison.png" alt="Two regions showing why smaller region first reduces branching" style={{ width: 'auto', height: 'auto' }} />
+          <p className="text-xs text-gray-400 uppercase tracking-wide mt-5">
             Region Size Comparison
           </p>
         </div>
@@ -310,10 +314,9 @@ function Queens() {
           It would return a <b>new copy</b> of the updated regions and remaining cells after blocking everything affected by that queen.
         </p>
 
-        {/* TODO: add image - Draw a queen with its blocked row, column and neighbouring cells highlighted */}
         <div>
-          <img src="" alt="Queen with blocked row, column and neighbouring cells highlighted" style={{ width: 'auto', height: 'auto' }} />
-          <p className="text-xs text-gray-400 uppercase tracking-wide">
+          <img src="/queens/blocked-cells.png" alt="Queen with blocked row, column and neighbouring cells highlighted" style={{ width: 'auto', height: 'auto' }} />
+          <p className="text-xs text-gray-400 uppercase tracking-wide mt-5">
             Blocked Cells
           </p>
         </div>
@@ -470,13 +473,13 @@ function Queens() {
           Time to backtrack.
         </p>
 
-        {/* TODO: add image - Draw four regions where queens placed in R1, R3 and R4 gradually eliminate every cell in R2 */}
+        {/* TODO: add image - Draw four regions where queens placed in R1, R3 and R4 gradually eliminate every cell in R2
         <div>
           <img src="" alt="Four regions showing how queens placed in R1, R3, R4 gradually eliminate every cell in R2" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
-            Region Elimination
+            Region Elimination 
           </p>
-        </div>
+        </div> */}
 
         <hr className='border-gray-300' />
         <H1 text="Building the Recursive Solver" />
@@ -618,13 +621,13 @@ function Queens() {
           />
         </div>
 
-        {/* TODO: add image - Draw the recursion tree showing successful branches and backtracking */}
+        {/* TODO: add image - Draw the recursion tree showing successful branches and backtracking
         <div>
           <img src="" alt="Recursion tree showing successful branches and backtracking" style={{ width: 'auto', height: 'auto' }} />
           <p className="text-xs text-gray-400 uppercase tracking-wide">
             Recursion Tree
           </p>
-        </div>
+        </div> */}
 
         <hr className='border-gray-300' />
         <H1 text="One Last Realization" />
@@ -774,7 +777,17 @@ function Queens() {
         <p>
           And honestly, that's my favourite part.
         </p>
+        <hr className='border-gray-300' />
+        <H1 text="Resources" />
+        <hr className='border-gray-300' />
 
+        <p>Below are resources related to this write-up and solver:</p>
+
+        <ul className="list-disc pl-5 space-y-2">
+          <li><a href="https://github.com/vishesh-sachan/RandomAlgos/blob/main/src/originals/queens/queens.py" target="_blank" rel="noopener noreferrer">Complete code file: Queens.py</a></li>
+          <li><a href="https://drive.google.com/file/d/1GqQ4lw9uC-rHXoH7t6vDyNhLRlK_KdVM/view?usp=sharing" target="_blank" rel="noopener noreferrer">Original sketches and planning: notes and drafts used while designing the solver</a></li>
+          <li><a href="https://github.com/vishesh-sachan/RandomAlgos/blob/main/src/originals/queens/queens-blog-first-draft.md" target="_blank" rel="noopener noreferrer">Blog's First Draft</a></li>
+        </ul>
       </div>
 
     </article>

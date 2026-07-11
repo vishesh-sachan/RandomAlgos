@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import { TangoProvider } from './context/TangoContext'
+import { QueensProvider } from './context/QueensContext'
 import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -12,8 +13,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
     <BrowserRouter>
       <TangoProvider>
-        <ScrollToTop />
-        <App />
+        <QueensProvider>
+          <ScrollToTop />
+          <App />
+        </QueensProvider>
       </TangoProvider>
     </BrowserRouter>
 
